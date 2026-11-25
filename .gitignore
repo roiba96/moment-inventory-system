@@ -1,0 +1,38 @@
+# secrets
+.env*
+!.env.example
+.dev.vars
+*.pem
+
+# dependencies
+node_modules/
+.venv/
+__pycache__/
+
+# build output
+dist/
+
+# tools
+.firebase/
+.wrangler/
+.claude/
+*.log
+firebase-debug.log
+
+# data files: never publish real stock, backups or supplier documents
+/data/
+/backups/
+*.csv
+*.xlsx
+*.xls
+*.pdf
+*.ics
+*backup*.json
+*גיבוי*
+
+# screenshots
+*.jpg
+*.jpeg
+screenshots/
+/app/*.png
+/app/tests/*.png

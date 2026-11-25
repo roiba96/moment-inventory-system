@@ -1,0 +1,16 @@
+{
+  "name": "moment-inventory-app",
+  "version": "1.0.0",
+  "description": "Build tools for the Moment inventory app",
+  "scripts": {
+    "build": "python build.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "firebase": "^10.14.1",
+    "firebase-tools": "^15.34.2"
+  }
+}

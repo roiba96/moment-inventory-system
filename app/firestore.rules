@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // רק מיילים מורשים של Google יכולים לקרוא ולכתוב. להוסיף מייל: להוסיף אותו לרשימה עם פסיק.
+    function allowed() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.email in ["owner@example.com"];
+    }
+    match /{document=**} {
+      allow read, write: if allowed();
+    }
+  }
+}
